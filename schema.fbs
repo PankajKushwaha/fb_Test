@@ -1,0 +1,26 @@
+namespace test;
+
+table Person {
+	name:string;
+	age:int;
+	weight:float;
+	gender:ubyte;
+}
+
+
+table GroupOfPerson {
+	group_name:string;
+	average_weight:int;
+	average_hight:int;
+	list_of_name:[string];
+}
+
+union Any  {Person,GroupOfPerson}
+
+table client
+{
+	test:Any;	
+}
+
+root_type client;
+
